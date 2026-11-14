@@ -1,6 +1,6 @@
 # Orbit Cadet: Probe Quest
 
-A friendly, cube-built 3D game for primary-school space explorers. Visit the Moon and Mars, scan mission records, discover the science behind NASA hardware, and spend earned points on equipment.
+A friendly 3D game for primary-school space explorers, with detailed space-exploration visuals. Visit the Moon and Mars, scan mission records, discover the science behind NASA hardware, and spend earned points on equipment.
 
 ## Relationship to the supplied project
 
@@ -59,6 +59,18 @@ The root `.github/workflows/probe-quest-pages.yml` provides a **manual** publish
 4. Open the URL provided by the completed workflow.
 
 The workflow derives the correct base path from GitHub Pages configuration, including project repositories. If the repository already contains an app, integrate the files in a separate branch and review conflicts before merging; do not overwrite existing work.
+
+## Visual overhaul and architecture
+
+The later `info.docx` restates the game and quiz requirements; it does not contain function definitions or a module tree. The existing source modules remain the architecture reference, rather than inventing a structure attributed to that document.
+
+- `src/game/Scene.tsx` integrates the renderer, player controller, mission stations and hazards.
+- `src/game/runtime.ts` supplies the shared terrain height query used for movement, station placement and hazard placement.
+- `src/game/rules.ts` owns rewards, upgrades and damage rules.
+- `src/game/quizzes.ts` and `src/components/StationQuiz.tsx` own question data and quiz presentation.
+- `src/pages/Expedition.tsx` connects gameplay, pause state, local saves, purchases and per-station retry timers.
+
+The visual overhaul changes rendering and terrain shape, not mission facts, quiz answers, rewards, upgrade prices, gravity constants or retry duration. Surface materials and models are illustrative, not NASA survey data or exact spacecraft reconstructions.
 
 ## Science and fiction
 

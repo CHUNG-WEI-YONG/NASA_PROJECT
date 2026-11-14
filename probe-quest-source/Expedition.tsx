@@ -595,7 +595,7 @@ function TouchControls({ rt, isTouch, pulseReady, onAct }: { rt: MutableRefObjec
 }
 
 function Overlay({ children }: { children: ReactNode }) {
-  return <div className="absolute inset-0 z-20 grid place-items-center bg-[hsl(232_38%_20%/0.28)] p-3 backdrop-blur-[2px]">{children}</div>;
+  return <div className="absolute inset-0 z-20 grid place-items-center bg-[hsl(222_45%_4%/0.55)] p-3 backdrop-blur-[3px]">{children}</div>;
 }
 
 function Sheet({ title, icon, onClose, children, testid }: { title: string; icon: ReactNode; onClose: () => void; children: ReactNode; testid: string }) {
@@ -625,7 +625,7 @@ function KindChip({ kind }: { kind: MissionKind }) {
 function Credits() {
   return (
     <footer className="mt-5 rounded-2xl bg-muted p-3 text-[11px] leading-relaxed text-muted-foreground" data-testid="text-credits">
-      Models and site layouts are simplified, blocky interpretations. Orbiters are collected at ground relays; failed missions and flybys are remembered at archive beacons, not shown as landed. The chasing drones are fictional. This fan-made learning game is not affiliated with or endorsed by NASA. Mission facts draw on NASA Science:{' '}
+      Models and site layouts are simplified, procedurally textured interpretations. Orbiters are collected at ground relays; failed missions and flybys are remembered at archive beacons, not shown as landed. The chasing drones are fictional. This fan-made learning game is not affiliated with or endorsed by NASA. Mission facts draw on NASA Science:{' '}
       <a className="font-bold underline" href="https://science.nasa.gov/moon/missions/" target="_blank" rel="noreferrer">Moon missions</a> and{' '}
       <a className="font-bold underline" href="https://science.nasa.gov/planetary-science/programs/mars-exploration/" target="_blank" rel="noreferrer">Mars exploration</a>.
       <p className="mt-2">Station questions use the supplied hackathon Resources document for Apollo, lunar rovers, ALSEP, Surveyor, Sojourner, Viking, Spirit and Opportunity, Phoenix, InSight, and Ingenuity. Additional stations use the original mission guide. Explore the provided resource:{' '}
